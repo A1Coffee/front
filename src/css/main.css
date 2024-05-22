@@ -23,6 +23,19 @@ body {
         font-size: 8pt;
         user-select: none;
     }
+    .sobaka {
+        background-image: url("./sobaka.jpg");
+        width: 300px;
+        height: 260px;
+        background-size: cover;
+        background-position: center;
+        position: fixed;
+        cursor: pointer;
+        transform: rotate(15deg);
+        z-index: 300;
+        left: -120px;
+        top: 100px
+    }
     .overlay {
         position: absolute;
         top: 20px;
@@ -544,13 +557,14 @@ body {
         right: 575px;
         margin-top: 590px;
     }
+
+/* Это конец.. */
+
     .dropdown {
         position: relative;
         display: inline-block;
     }
-
     .dropdown-content {
-        display: none;
         position: absolute;
         background-color: #8083C7;
         width: 376px;
@@ -559,17 +573,13 @@ body {
         right: -475px;
         border-radius: 20px;
         z-index: 1;
-    }
-    .dropdown-content::before {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background-color: #8083C7;
-        transform: rotate(45deg);
-        border-radius: 15%;
-        position: absolute;
-        top: -10px;
-        right: 23px;
+        transition: 0.2s;
+        visibility: hidden;
+        opacity: 0;
+    }    
+    .dropdown-content.active {
+        visibility: visible;
+        opacity: 1;
     }
     .dropdown-content a {
         color: white;
@@ -577,9 +587,5 @@ body {
         margin: 42px;
         text-decoration: none;
         display: flex;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
     }
 }
