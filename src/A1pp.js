@@ -15,7 +15,7 @@
 //     return (<div className="name">
       
 //       <div class="heada">
-//         <div class="overlay" />
+        // <div class="overlay" />
 //           <div class="iconufu"/>
 //       <div class="sobaka"/>
 //           <div class="logo2"/>

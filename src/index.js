@@ -12,20 +12,22 @@ function App() {
     const handleClick = () => {
       setShowMenu(!showMenu);
     };
+    const handleCloseMenu = () => {
+      setShowMenu(false);
+    };
+
+    useEffect(() => {
+      const handleClickOutside = (event) => {
+        if (showMenu && !event.target.closest('.dropdown-content') && !event.target.closest('.menu1')) {
+          handleCloseMenu();
+        }
+      };
   
-    // useEffect(() => {
-    //   const handleClickOutside = (event) => {
-    //     if (showMenu && !event.target.closest('.dropdown-content')) {
-    //       setShowMenu(false); 
-    //     }
-    //   };
-  
-    //   document.addEventListener('click', handleClickOutside);
-  
-    //   return () => {
-    //     document.removeEventListener('click', handleClickOutside);
-    //   };
-    // }, [showMenu]);
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }, [showMenu]);
 
     return (<div className="name">
       
