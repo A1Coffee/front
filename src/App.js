@@ -15,18 +15,7 @@ class App extends React.Component {
           <div class="button6">Направления</div>
           <div class="button6">О школе</div>
           <div class="menu1"/>
-          <div class="dropdown">
-          <div class="menu1"/>
-              <div class="dropdown-content">
-                <a href="#">Направления</a>
-                <a href="#">О школе</a>
-                <a href="#">Расписание</a>
-                <a href="#">Подать заявку</a>
-                <a href="#">Преподаватели</a>
-                <a href="#">Интенсивы</a>
-              </div>
-            </div>      
-          </div>
+      </div>
       <div class="photoback"/>
       <div class="motivat">
         Погрузимся в мир <br/> информационных <br/> технологий вместе!
